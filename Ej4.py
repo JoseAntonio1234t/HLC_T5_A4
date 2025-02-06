@@ -1,6 +1,5 @@
 def suma_numeros(n):
-    suma = 0
-    for i in range(1, n + 1):
-        suma += i
-    return suma
-print(suma_numeros(5))
+    if n == 0:
+        return 0
+    return n%10 + suma_numeros(int(n/10))
+print(suma_numeros(1234))
